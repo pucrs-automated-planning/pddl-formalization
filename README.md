@@ -78,15 +78,13 @@ accompanies each image should be fairly self-explanatory; remember, you
 must model corridors between rooms-rooms for the hero to move from
 one to the other, and you can only move between connected rooms and visited each room only **once**. Problems are specified such that cells stand for rooms and edges between them represent corridors. “I” is an initial hero's position, “G” is hero's desired goal position, “S” indicates sword, “M” is a monster, and “T” stands for trap.
 
-![Problem 1](https://cloud.githubusercontent.com/assets/11094484/9399863/ad555250-4790-11e5-8ba3-c5d888b53f91.png "Problem 1")
+![Problem 1](https://cloud.githubusercontent.com/assets/11094484/17340255/c8d4331a-58c5-11e6-9247-ea1b11687759.png "Problem 1")
 _Figure 1 - Problem 1_
 
-
-![Problem 2](https://cloud.githubusercontent.com/assets/11094484/9399864/ad5b9610-4790-11e5-8ed4-200be06741fa.png "Problem 2")
+![Problem 2](https://cloud.githubusercontent.com/assets/11094484/17340257/c901bf6a-58c5-11e6-84bd-4836059df305.png "Problem 2")
 _Figure 2 - Problem 2_
 
-
-![Problem 3](https://cloud.githubusercontent.com/assets/11094484/9399865/ad698572-4790-11e5-9983-cb5083d5f6ed.png "Problem 3")
+![Problem 3](https://cloud.githubusercontent.com/assets/11094484/17340256/c8ff76ba-58c5-11e6-8b6f-45d670623f9d.png "Problem 3")
 _Figure 3 - Problem 3_
 
 Grading
