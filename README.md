@@ -78,12 +78,16 @@ accompanies each image should be fairly self-explanatory; remember, you
 must model corridors between rooms-rooms for the hero to move from
 one to the other, and you can only move between connected rooms and visited each room only **once**. Problems are specified such that cells stand for rooms and edges between them represent corridors. “I” is an initial hero's position, “G” is hero's desired goal position, “S” indicates sword, “M” is a monster, and “T” stands for trap.
 
+### Problem 1
+
 ![Problem 1](https://cloud.githubusercontent.com/assets/11094484/17340255/c8d4331a-58c5-11e6-9247-ea1b11687759.png "Problem 1")
 _Figure 1 - Problem 1_
 
+### Problem 2
 ![Problem 2](https://cloud.githubusercontent.com/assets/11094484/17340257/c901bf6a-58c5-11e6-84bd-4836059df305.png "Problem 2")
 _Figure 2 - Problem 2_
 
+### Problem 3
 ![Problem 3](https://cloud.githubusercontent.com/assets/11094484/17340256/c8ff76ba-58c5-11e6-8b6f-45d670623f9d.png "Problem 3")
 _Figure 3 - Problem 3_
 
@@ -112,7 +116,7 @@ assignment. [The formatting instructions are available at ShareLatex (AAAI Press
     encoding planning domains and discuss the performance of [JavaGP],
     and any limitations encountered in solving the problems you encoded.
 
-Grading will take consider elements of your encoding, experimentation
+Grading will consider elements of your encoding, experimentation
 and reporting of the work done. The criteria, as well as their weight in
 the final grade is as follows:
 
@@ -135,17 +139,11 @@ the final grade is as follows:
 Sample PDDL files
 =================
 
-We have provided two template PDDL files at [Domain Template](https://github.com/pucrs-automated-planning/pddl-formalization/blob/master/pddl/domain-template.pddl) and [Problem Template](https://github.com/pucrs-automated-planning/pddl-formalization/blob/master/pddl/problem-template.pddl)
-to get you started, these were obtained from the
-[myPDDL](https://github.com/Pold87/myPDDL "GitHub repository") sublime package. We have also
-provided some sample files for other domains that you should look at
-before attempting to encode your own domain file and problem files.
-These will give you an idea of the information that goes into each of
-those files, and the syntax. You can also use these samples to test out
-the running of the planner, and to see what the output should look like.
-
+We have provided two template PDDL files at [Domain Template](../pddl/domain-template.pddl) and [Problem Template](../pddl/problem-template.pddl) to get you started, these were obtained from the [myPDDL](https://github.com/Pold87/myPDDL "GitHub repository") sublime package.
+We have also provided some sample files for other domains that you should look at before attempting to encode your own domain file and problem files.
+These will give you an idea of the information that goes into each of those files, and the syntax.
+You can also use these samples to test out the running of the planner, and to see what the output should look like.
 -   [Blocks World Domain](http://moodle.pucrs.br/mod/resource/view.php?id=720129 "at Moodle")
-
 -   [Gripper domain](http://moodle.pucrs.br/mod/resource/view.php?id=729356 "at Moodle")
 
 Miscellaneous Advice
