@@ -80,11 +80,11 @@ one to the other, and you can only move between connected rooms and visited each
 
 ### Problem 1
 
-![Problem 1](https://cloud.githubusercontent.com/assets/11094484/17340255/c8d4331a-58c5-11e6-9247-ea1b11687759.png "Problem 1")
+![Problem 1](https://cloud.githubusercontent.com/assets/11094484/17340938/c0e712f0-58c8-11e6-895b-147f80574a76.png "Problem 1")
 _Figure 1 - Problem 1_
 
 ### Problem 2
-![Problem 2](https://cloud.githubusercontent.com/assets/11094484/17340257/c901bf6a-58c5-11e6-84bd-4836059df305.png "Problem 2")
+![Problem 2](https://cloud.githubusercontent.com/assets/11094484/17340937/c0e5d368-58c8-11e6-8dc9-98b7cf8ec0e6.png "Problem 2")
 _Figure 2 - Problem 2_
 
 ### Problem 3
