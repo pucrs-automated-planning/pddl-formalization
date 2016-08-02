@@ -1,7 +1,7 @@
 # PDDL formalization
 :beginner: Classical Planning Assignment
 
-Rescue Robot Domain
+RPG Domain
 ===================
 
 You must work on this project **individually**. You are free to discuss
@@ -20,11 +20,11 @@ Moodle using the correspondingly named upload rooms. At the end of this
 assignment, you will upload **one zip file** containing the problem
 specification files in the PDDL format, specifically:
 
--   one file named `robby.pddl` containing the domain encoding;
+-   one file named `rpg.pddl` containing the domain encoding;
 
 -   three files containing the problems you formalised, named
     `pb#`, where `#` is the sequential number of your
-    problem, e.g. `pb1.pddl`, `pb2.pddl`;
+    problem, e.g. `pb1.pddl`, `pb2.pddl`, and `pb3.pddl`;
 
 -   the same number of files (with similar names) showing the traces
     created by [JavaGP] for the problems you created (e.g. `pb1.pddl` and `pb1.txt`); and
@@ -34,77 +34,40 @@ specification files in the PDDL format, specifically:
 Overview
 ========
 
-In this assignment you will formalise *Robby*, a search and report
-robot. Robby’s job is to navigate the mundane world of office hallways
-and rooms in the event of some unforeseen disaster, and look out for
-resources to rescue.
+In this assignment you will formalise *RPG*, help a hero to get out of dungeon. 
+The hero woke up in a dungeon full of monsters and traps (perhaps the party last night went wrong...) and needs your help to get out. Here are basic facts about the dungeon:
 
-For this project, we will model a simple model of the world that Robby
-has to work in. This is essentially a long office hallway that is split
-into various segments or hallway-locations. These hallway-locations may
-or may not be connected to various rooms.
+- The dungeon contains rooms that are connected by corridors (dungeon can thus be represented by undirected graph);
+- Each room can be empty, or can have a monster in it, or can have a trap in it, or can have a sword in it; and
+- One of the empty rooms is the “goal”: it has an exit, so the hero can escape;
 
-You will need to model two different types of locations, hallways and
-rooms. Robby can be “at” a particular location at a given point, and
-only at that location. Two locations can be “connected” to each other,
-enabling Robby to navigate between them (regardless of whether they are
-rooms or hallways). Note that connections are symmetric, so you need to
-model the fact that if Robby can go from A to B, then going from B to A
-is also possible. You can also assume that a hallway-location is a whole
-object - if Robby is anywhere in a given hallway-location, then Robby
-can enter any of the rooms connected to that hallway-location, and move
-from/to any of the other hallway-locations connected to it.
+The hero is lucky since he has full knowledge about the dungeon. But not that lucky, just after the hero leaves room s/he just visited, the room is destroyed and cannot be visited again.
 
-Navigating between hallway-locations and rooms is achieved via “enter”
-and “exit” actions. The enter action enables moving from a
-hallway-location to a room, while the exit action enables the opposite -
-moving from a room to a hallway-location. Remember that the two need to
-be connected in order to perform an enter or an exit - and you need to
-model those connections.
+The hero can perform the following actions, but only if s/he is alive!
 
-To navigate between two connected hallway-locations, Robby uses a
-special “move” action that only works on locations of type hallway. In
-the domain and problems that you are to model, Robby should not move
-within rooms or from one room to another directly, and only enters and
-exits from hallway-locations.
+- The hero can move to an adjacent room (connected by a corridor) that has not been destroyed (i.e., the hero has not already visited the room);
+- Pickup the sword if present in the room the hero is currently in and the hero is empty handed;
+- Destroy the sword that the hero currently holds. However, this can have unpleasant effects if done in a room with a trap or a monster;
+- Disarm a trap, if there is a trap in the room the hero is in and the hero is empty-handed (does not hold a sword), then the hero can disarm it.
 
-To ensure that Robby doesn’t cheat and visits all locations of interest,
-there are special beacons “in” those locations. The beacons can be in
-either hallway-locations or rooms (since they both are subtypes of
-“location”). Robby needs to necessarily be at a given location in order
-to spot the beacon at that location. Once Robby spots and “reports” that
-beacon, he can move on to the next task at hand (so you may want to
-model the reporting of beacons as goals). Finally, there is a
-destination that Robby must end up at - this is another goal that you
-must model.
+However, there are some (dangerous) constraints the hero has to consider:
+- If the hero enters a room with a monster in it, s/he has to carry a sword (so the monster is afraid of him/her), otherwise the monster kills him/her. Notice that the hero is pacifist, so s/he cannot kill the monster;
+- If the hero destroys the sword in a room with a monster in it, the monster kills him/her as well;
+- The only action the hero can safely perform in a room with a trap in it is the “disarm a trap” action. Any other action (even moving away) triggers the trap which kills the hero.
 
 Whenever we need to use automated tools to solve problems on our behalf,
 we must provide a consistent specification of the *transition system* of
 the underlying problem. If we specify the problem poorly, we jeopardise
 the planner software ability to generate valid responses, leading to
 false negatives and unnecessarily long waiting times for the planner at
-best, or incorrect plans at worse. Thus, specifying the Robby domain in
+best, or incorrect plans at worse. Thus, specifying the RPG domain in
 PDDL gives you a chance to develop your skills in designing consistent
 transition systems, helping you avoid bugs in the software you will
 write in the future to handle all kinds of other processes.
 
 Your assignment is to develop a domain file from the specification
 above, and then model the situations depicted in the images below as
-individual problem files. The following hints may be useful, but you are
-welcome to use your creativity as long as you adhere to the
-specification mentioned above:
-
--   You need actions for moving between hallway-locations, as well as
-    actions to enable the entering and exiting;
-
--   You need an action to look for a beacon at a specific location and
-    report it, so Robby can establish that he has been to a particular
-    place (There is no sensing involved here; if a beacon is declared as
-    being in a particular location, and Robby is also at that location,
-    then he can report that beacon.);
-
--   Look at the words in quote-marks in the specification above. They
-    may give you a good skeleton to base your domain on.
+individual problem files.
 
 Problem Instances
 =================
@@ -112,13 +75,8 @@ Problem Instances
 Below are images of the problem instances that you need to model in
 PDDL, once you are done making your domain file. The legend that
 accompanies each image should be fairly self-explanatory; remember, you
-must model connections between hallway-locations for Robby to move from
-one to the other, and you can only enter and exit between a
-hallway-location and a room that are connected. In the instances shown
-in Figures 1 through 3, any
-locations that share an edge can be considered connected (you do not
-need to explicitly model doors). Locations that share only corners and
-no edges are not connected.
+must model corridors between rooms-rooms for the hero to move from
+one to the other, and you can only move between connected rooms and visited each room only **once**. Problems are specified such that cells stand for rooms and edges between them represent corridors. “I” is an initial hero's position, “G” is hero's desired goal position, “S” indicates sword, “M” is a monster, and “T” stands for trap.
 
 ![Problem 1](https://cloud.githubusercontent.com/assets/11094484/9399863/ad555250-4790-11e5-8ba3-c5d888b53f91.png "Problem 1")
 _Figure 1 - Problem 1_
@@ -130,14 +88,6 @@ _Figure 2 - Problem 2_
 
 ![Problem 3](https://cloud.githubusercontent.com/assets/11094484/9399865/ad698572-4790-11e5-9983-cb5083d5f6ed.png "Problem 3")
 _Figure 3 - Problem 3_
-
-Notice that the above pictures give you an idea of the initial state of
-the world (which you must encode in your PDDL problem file). They also
-tell you what the goals are - Robby’s final location (in green), and the
-various beacons that must be reported on the way. If you look at the
-syntax of example PDDL problem files, you will see that these are the
-three main parts of a problem file - (1) the objects, (2) the initial
-state, and (3) the goals.
 
 Grading
 =======
