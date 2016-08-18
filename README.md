@@ -3,6 +3,7 @@
 
 **Felipe Meneguzzi**  
 **Mauricio Magnaguagno (PhD Student)**
+**Ramon Fraga Pereira (PhD Student)**
 
 Assigned: 1 September  
 Due: Thursday 8 September, 9h50am
@@ -153,5 +154,15 @@ Other Planning Software
 =======================
 
 - [Fast Downward](http://www.fast-downward.org)
+
+- [Planning Domains](http://editor.planning.domains/#)
+  - Online tool, planning API
+  - Write both domain and problem in the editor
+    - New files can be created from the **File** top menu
+    - Files are listed in the left, double click to rename
+  - Click **Solve** in the top menu
+    - Select domain and problem files before clicking **Plan**
+    - Bottom right corner will display information about planning
+    - Output file is generated, contain plan or error message
 
 [JavaGP]: https://github.com/pucrs-automated-planning/javagp "Project page at Github"
