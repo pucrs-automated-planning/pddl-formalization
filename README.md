@@ -2,7 +2,7 @@
 :beginner: Classical Planning Assignment
 
 **Felipe Meneguzzi**  
-**Mauricio Magnaguagno (PhD Student)**
+**Mauricio Magnaguagno (PhD Student)**  
 **Ramon Fraga Pereira (PhD Student)**
 
 Assigned: 1 September  
