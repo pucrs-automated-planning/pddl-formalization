@@ -152,7 +152,6 @@ Here are some lessons we learned in creating our own solution and writing papers
 
 Other Planning Software
 =======================
-
 - [Fast Downward](http://www.fast-downward.org)
 
 - [Planning Domains](http://editor.planning.domains/#)
@@ -164,5 +163,10 @@ Other Planning Software
     - Select domain and problem files before clicking **Plan**
     - Bottom right corner will display information about planning
     - Output file is generated, contain plan or error message
+
+- [STRIPS-Fiddle](https://stripsfiddle.herokuapp.com/)
+  - Online tool
+  - Write both domain and problem in the code editors
+  - Click **Run** in the top menu
 
 [JavaGP]: https://github.com/pucrs-automated-planning/javagp "Project page at Github"
