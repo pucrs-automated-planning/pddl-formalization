@@ -154,8 +154,21 @@ Other Planning Software
 =======================
 - [Fast Downward](http://www.fast-downward.org)
 
+- [JavaFF](https://github.com/Optimised/JavaFF)
+  - Local planner, port of FF (C to Java)
+  - Installation steps
+    - Download and unpack zip
+    - Check if java and javac are available in your path (JDK)
+    - ``cd JavaFF/src``
+    - ``javac javaff/*.java``
+  - Write domain and problem in separate files and use their path as arguments
+    - ``java javaff/JavaFF ../problems/depots/domain.pddl ../problems/depots/pfile01``
+
+- [JavaGP]
+  - Local planner
+
 - [Planning Domains](http://editor.planning.domains/#)
-  - Online tool, planning API
+  - Online planner, editor and planning API
   - Write both domain and problem in the editor
     - New files can be created from the **File** top menu
     - Files are listed in the left, double click to rename
@@ -165,8 +178,18 @@ Other Planning Software
     - Output file is generated, contain plan or error message
 
 - [STRIPS-Fiddle](https://stripsfiddle.herokuapp.com/)
-  - Online tool
+  - Online planner and editor
   - Write both domain and problem in the code editors
   - Click **Run** in the top menu
+ 
+- [Web-planner](http://web-planner.herokuapp.com/)
+  - online planner, editor and visualizer.
+  - The editor supports syntax highlighting for PDDL and shows both domain (left) and problem (center) at the same time.
+  - The solve button calls the planner and shows the output (right).
+  - The planner supports the following requirements:
+    - ``:strips`` as the basic requirement for preconditions and effects
+    - ``:negative-preconditions`` to use not in preconditions
+    - ``:equality`` to use ``=`` in preconditions
+    - ``:typing`` to define type of objects and parameters, ``?var - typeofvar``
 
 [JavaGP]: https://github.com/pucrs-automated-planning/javagp "Project page at Github"
