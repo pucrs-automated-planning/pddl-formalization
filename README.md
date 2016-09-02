@@ -150,6 +150,39 @@ Here are some lessons we learned in creating our own solution and writing papers
 
 -   Reviewers have a more pleasant reading experience when papers are generated using <span style="font-variant:small-caps;">LaTeX</span>, it is very easy to spot the difference.
 
+### Most common requirements
+- ``:strips`` - default requirement (positive preconditions, add and delete effects)
+- ``:negative-preconditions`` - able to use ``not`` in preconditions
+- ``:equality`` - able to use ``=`` in preconditions
+- ``:typing`` - able to type objects and variables, ``obj - type``
+- ``:disjunctive-preconditions`` - able to use ``or`` in preconditions
+- ``:conditional-effects`` - able to use ``when`` in effects
+
+### Downgrading PDDL
+- Some planners may lack the desired requirements
+- Sometimes we can rewrite the description using simpler constructions
+- ``:negative-preconditions``
+  - Duplicate predicate and use antonym instead, sometimes you can remove the original predicate
+    - ``(not (clean ?space))`` => ``(dirty ?space)``
+- ``:equality``
+  - Add an equality predicate ``(equal obj obj)`` for each object at the initial state and replace preconditions
+- ``:typing``
+  - Move types to initial state and parameters to preconditions
+    - ``(?var - type)`` => ``(type ?var)``
+- ``:disjunctive-preconditions``
+  - Break each part of the precondition into different actions
+
+### What is important to describe?
+- Which requirements you used?
+  - Why?
+  - Do they make it simpler to describe/understand the problem?
+- Which predicates you used?
+- Small modifications impact your description?
+  - Typing
+  - More than one hero
+  - Get out dungeon with sword
+  - Get out dungeon disarming all traps
+
 Other Planning Software
 =======================
 - [Fast Downward](http://www.fast-downward.org)
@@ -182,7 +215,7 @@ Other Planning Software
   - Write both domain and problem in the code editors
   - Click **Run** in the top menu
  
-- [Web-planner](http://web-planner.herokuapp.com/)
+- [Web-planner](http://web-planner.herokuapp.com/) - This is the online planner we are developing and we would like you to test
   - online planner, editor and visualizer.
   - The editor supports syntax highlighting for PDDL and shows both domain (left) and problem (center) at the same time.
   - The solve button calls the planner and shows the output (right).
