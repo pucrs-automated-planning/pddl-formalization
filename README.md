@@ -215,7 +215,7 @@ Other Planning Software
   - Write both domain and problem in the code editors
   - Click **Run** in the top menu
  
-- [Web-planner](http://web-planner.herokuapp.com/) - This is the online planner we are developing and we would like you to test
+- [Web-planner](http://web-planner.herokuapp.com/) - This is the online planner we are developing and would like you to test
   - online planner, editor and visualizer.
   - The editor supports syntax highlighting for PDDL and shows both domain (left) and problem (center) at the same time.
   - The solve button calls the planner and shows the output (right).
