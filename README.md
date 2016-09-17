@@ -69,9 +69,9 @@ Your assignment is to develop a domain file from the specification above, and th
 Problem Instances
 =================
 
-The image below represent the problem instances that you need to model in PDDL, once you are done making your domain file. 
+The image below represents the problem instances that you need to model in PDDL, once you are done encoding your domain file. 
 The text that accompanies each image is self-explanatory; remember, you must model corridors between rooms, rooms for the hero to move through, and you can only move between connected rooms and visit each room only **once**. 
-Problems are specified such that cells stand for rooms and edges between them represent corridors. 
+We specify problems so that cells stand for rooms and edges between them represent corridors. 
 “I” is the hero's initial position, “G” is hero's desired goal position, “S” indicates a sword, “M” is a monster, and “T” stands for trap.
 
 ### Problem 1
