@@ -6,7 +6,7 @@
 **Ramon Fraga Pereira (PhD Student)**
 
 Assigned: 2 April
-Due: Tuesday 9 April, 19h30am (final deadline Thursday 18, with discounts)
+Due: Tuesday 9 April, 19h30am (final deadline Thursday 16, with discounts)
 
 Domain adapted from the [2016 The Fifth International Competition on Knowledge Engineering for Planning and Scheduling (ICKEPS)](https://helios.hud.ac.uk/scommv/ICKEPS/Scenarios.pdf), credits to [Dr. Lukas Chrpa](https://helios.hud.ac.uk/scomlc/) for the scenario.
 
