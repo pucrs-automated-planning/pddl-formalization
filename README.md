@@ -29,7 +29,7 @@ At the end of this assignment, you will upload **one zip file** containing the p
     `pb#`, where `#` is the sequential number of your
     problem, e.g. `pb1.pddl`, `pb2.pddl`, and `pb3.pddl`;
 
--   the same number of files (with similar names) showing the traces created by the planner for the problems you created (e.g. `pb1.pddl` and `pb1.txt`); and
+-   the same number of files (with similar names) showing the traces (including the resulting plans) created by the planner for the problems you created (e.g. `pb1.pddl` and `pb1.txt`); and
 
 -   one report following the guidelines detailed below.
 
