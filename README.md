@@ -10,8 +10,7 @@ Due: Tuesday 9 April, 19h30am (final deadline Thursday 16, with discounts)
 
 Domain adapted from the [2016 The Fifth International Competition on Knowledge Engineering for Planning and Scheduling (ICKEPS)](https://helios.hud.ac.uk/scommv/ICKEPS/Scenarios.pdf), credits to [Dr. Lukas Chrpa](https://helios.hud.ac.uk/scomlc/) for the scenario.
 
-RPG Domain
-===================
+## RPG Domain
 
 You must work on this project **individually**. 
 You are free to discuss high-level design issues with the people in your class, but every aspect of your actual formalisation must be entirely your own work.
@@ -33,8 +32,7 @@ At the end of this assignment, you will upload **one zip file** containing the p
 
 -   one report following the guidelines detailed below.
 
-Overview
-========
+## Overview
 
 In this assignment you will formalise *RPG* to help a hero to get out of a dungeon. 
 The hero woke up in a dungeon full of monsters and traps (perhaps the party last night went wrong...) and needs your help to get out. 
@@ -65,8 +63,7 @@ Thus, specifying the RPG domain in PDDL gives you a chance to develop your skill
 
 Your assignment is to develop a domain file from the specification above, and then model the situations depicted in the images below as individual problem files.
 
-Problem Instances
-=================
+## Problem Instances
 
 The image below represents the problem instances that you need to model in PDDL, once you are done encoding your domain file. 
 The text that accompanies each image is self-explanatory; remember, you must model corridors between rooms, rooms for the hero to move through, and you can only move between connected rooms and visit each room only **once**. 
@@ -85,8 +82,7 @@ We specify problems so that cells stand for rooms and edges between them represe
 ### Problem 3
 ![Problem 3](fig/RPG-pb3.png "Problem 3")
 
-Grading
-=======
+## Grading
 
 <!-- In order to properly evaluate your work and thought process, you will write a 2-page report in the AAAI two-column format explaining your encoding and experiments.
 These guidelines are to be followed **exactly**.
@@ -127,16 +123,14 @@ The criteria, as well as their weight in the final grade is as follows:
 
 -   Bonus (10%) - formalise a domain and problem with at least 2 heroes. -->
 
-Sample PDDL files
-=================
+## Sample PDDL files
 
 We have provided two template PDDL files at [Domain Template](pddl/domain-template.pddl) and [Problem Template](pddl/problem-template.pddl) to get you started, these were obtained from the [myPDDL](https://github.com/Pold87/myPDDL "GitHub repository") sublime package.
 We have also provided some sample files for other domains that you should look at before attempting to encode your own domain file and problem files.
 These will give you an idea of the information that goes into each of those files, and the syntax.
 
 
-Miscellaneous Advice
-====================
+## Miscellaneous Advice
 
 Here are some lessons we learned in creating our own solution and writing papers/reports:
 
@@ -195,8 +189,14 @@ Here are some lessons we learned in creating our own solution and writing papers
   - Get out dungeon with sword
   - Get out dungeon disarming all traps
 
-Other Planning Software
-=======================
+## Other Planning Software
+
+- [VSCode Plugin](https://github.com/jan-dolejsi/vscode-pddl), is a plugin for the popular VSCode IDE, which. This plugin requires:
+   - [VSCode](https://code.visualstudio.com)
+   - [PDDL Plugin](https://marketplace.visualstudio.com/items?itemName=jan-dolejsi.pddl)
+
+[![](http://img.youtube.com/vi/XW0z8Oik6G8/0.jpg)](http://www.youtube.com/watch?v=XW0z8Oik6G8 "")
+
 - [Fast Downward](http://www.fast-downward.org)
 
 - [JavaFF](https://github.com/Optimised/JavaFF)
