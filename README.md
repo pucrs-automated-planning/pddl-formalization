@@ -5,8 +5,8 @@
 **Mauricio Magnaguagno (PhD Student)**  
 **Ramon Fraga Pereira (PhD Student)**
 
-Assigned: 2 April
-Due: Tuesday 9 April, 19h30am (final deadline Thursday 16, with discounts)
+Assigned: 24 March
+Due: Wednesday 31 March, 9h45am (final deadline Friday 2, with discounts)
 
 Domain adapted from the [2016 The Fifth International Competition on Knowledge Engineering for Planning and Scheduling (ICKEPS)](https://helios.hud.ac.uk/scommv/ICKEPS/Scenarios.pdf), credits to [Dr. Lukas Chrpa](https://helios.hud.ac.uk/scomlc/) for the scenario.
 
@@ -84,29 +84,12 @@ We specify problems so that cells stand for rooms and edges between them represe
 
 ## Grading
 
-<!-- In order to properly evaluate your work and thought process, you will write a 2-page report in the AAAI two-column format explaining your encoding and experiments.
-These guidelines are to be followed **exactly**.
-**Reports that are less than two pages of actual content, or not in format will receive 0 marks for the report criterion.**
-This report will be included in the deliverables of **Part B** of the assignment. [The formatting instructions are available at ShareLatex (AAAI Press)](https://pt.sharelatex.com/templates/journals/aaai-press).
-The report must have the following sections:
-
--   An introduction with your understanding of the problem domain, outlining the remainder of the paper;
-
--   Two domain formalisation sections explaining your approach to formalising the problems from Section [Problem Instances](#problem-instances).
-
--   One experimentation section where you measure the performance of the planner using your action formalisation for each of the domains, on multiple problems.
-
--   One conclusion section, where you will summarise your experience in encoding planning domains and discuss the performance of the planner, and any limitations encountered in solving the problems you encoded. -->
-
 In order to properly evaluate your work and thought process, you will write a short ```README.md``` file explaining your encoding and experiments. 
 The report must have the following sections:
 
 -   An introduction with your understanding of the problem domain, outlining the remainder of the paper;
-
 -   Two domain formalisation sections explaining your approach to formalising the problems from Section [Problem Instances](#problem-instances).
-
 -   One experimentation section where you measure the performance of the planner using your action formalisation for each of the domains, on multiple problems.
-
 -   One conclusion section, where you will summarise your experience in encoding planning domains and discuss the performance of the planner, and any limitations encountered in solving the problems you encoded.
 
 <!-- Grading will consider elements of your encoding, experimentation and reporting of the work done.
@@ -135,25 +118,17 @@ These will give you an idea of the information that goes into each of those file
 Here are some lessons we learned in creating our own solution and writing papers/reports:
 
 - [PDDL Reference](https://planning.wiki/ref)
-
 -   As a first step, you should at least look at the sample domain and problem files given at the beginning of this specification.
     Additionally, here is a link to [PDDL domain and problem files](http://icaps-conference.org/index.php/Main/Competitions) (for scenarios different from the one you need to model in this project), from past iterations of the International Planning Competition (IPC).
-
 -   The best way to figure out how to model a domain and associated problems is to look at these examples. If you feel the need for documentation, here is a paper that talks about the complete PDDL specification, with BNF specification at the end (Appendix A): [PDDL 2.1 Specification](http://www.public.asu.edu/~ktalamad/tmp/files/pddl21specs.pdf)
-
 -   Using type predicates increases memory usage and slows down the creation of ground atoms but speeds up the (dominant) time to solve the problem (PDDL, however, allows typing of parameters);
-
 -   Tables and graphs are a useful tool to show runtime performance of software, take a loot at [GnuPlot](http://www.gnuplot.info/ "GnuPlot is an excellent (and free) graph making software");
-
 -   In order to evaluate the performance of a planning encoding, you need to specify problems with most of the parameters locked in, and measure runtime as one parameter increases (e.g. number of locations, number of containers, etc);
-
 -   Pasting your entire domain specification (or problems) into the paper does not count as content (now you cannot say you were not warned);
-
 -   Overly large figures used to simply fill space in the report are also not a good idea;
-
 -   Reviewers have a more pleasant reading experience when papers are generated using <span style="font-variant:small-caps;">LaTeX</span>, it is very easy to spot the difference.
-
 -   [JavaGP] does not parse “or” conditions or effects. You need to specify conditions / effects as a list of predicates bound together by a single “and”.
+- [Nir Lipovetzky](http://nirlipo.github.io) runs a similar modelling problem in his planning course, except his also includes a visualization generated by [planimation](https://nirlipo.github.io/project/planimation/), [check it out](https://github.com/nirlipo/PDDLmodeling/tree/main/RPG-game)
 
 
 ### Most common requirements
