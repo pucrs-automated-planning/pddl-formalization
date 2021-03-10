@@ -82,7 +82,7 @@ We specify problems so that cells stand for rooms and edges between them represe
 ### Problem 3
 ![Problem 3](fig/RPG-pb3.png "Problem 3")
 
-## Grading
+## Grading (submission instructions)
 
 In order to properly evaluate your work and thought process, you will write a short ```README.md``` file explaining your encoding and experiments. 
 The report must have the following sections:
@@ -112,6 +112,24 @@ We have provided two template PDDL files at [Domain Template](pddl/domain-templa
 We have also provided some sample files for other domains that you should look at before attempting to encode your own domain file and problem files.
 These will give you an idea of the information that goes into each of those files, and the syntax.
 
+<!-- Partly lifted from Nir's website -->
+## Important Advice 
+
+**Corrections:** From time to time, students or staff find errors (e.g., typos, unclear instructions, etc.) in the assignment specification. In that case, corrected version of this file will be produced, announced, and distributed for you to commit and push into your repository.  Because of that, you are NOT to modify this file in any way to avoid conflicts.
+
+**Late submissions & extensions:** You have a 24 hour grace period with a penalty of 10% of the maximum mark, which increases to 50% until 48 hours after the due date, and 100% penalty thereafter. Extensions will only be permitted in _exceptional_ circumstances. 
+
+**About this repo:** You must ALWAYS keep your fork **private** and **never share it** with anybody in or outside the course, except your teammates, _even after the course is completed_. You are not allowed to make another repository copy outside the provided GitHub Classroom without the written permission of the teaching staff. 
+
+> **_Please do not distribute or post solutions to any of the projects._**
+
+**Academic Dishonesty:** This is an advanced course, so we expect full professionalism and ethical conduct.  Plagiarism is a serious issue. Please **don't let us down and risk our trust**. The staff take academic misconduct very seriously. Sophisticated _plagiarism detection_ software will be used to check your code against other submissions in the class as well as resources available on the web for logical redundancy. These systems are really smart, so just do not risk it and keep professional. We trust you all to submit your own work only; please don't let us down. If you do, we will pursue the strongest consequences available to us..
+
+<!-- **We are here to help!:** We are here to help you! But we don't know you need help unless you tell us. We expect reasonable effort from you side, but if you get stuck or have doubts, please seek help. We will ran labs to support these projects, so use them! While you have to be careful to not post spoilers in the forum, you can always ask general questions about the techniques that are required to solve the projects. If in doubt whether a questions is appropriate, post a Private post to the instructors. -->
+
+**Silence Policy:** A silence policy will take effect **48 hours** before this assignment is due. This means that no question about this assignment will be answered, whether it is asked on the newsgroup, by email, or in person. Use the last 48 hours to wrap up and finish your project quietly as well as possible if you have not done so already. Remember it is not mandatory to do all perfect, try to cover as much as possible. By having some silence we reduce anxiety, last minute mistakes, and unreasonable expectations on others. 
+
+Please remember to follow all the submission steps as per project specification.
 
 ## Miscellaneous Advice
 
